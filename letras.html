@@ -45,16 +45,7 @@
     </style>
 </head>
 <body>
-    <header style="background-color: #f0f0f0; padding: 1rem; margin-bottom: 2rem; border-bottom: 2px solid #333;">
-        <nav>
-            <a href="index.html" style="margin-right: 2rem; text-decoration: none; font-size: 1.1rem;">Home</a>
-            <a href="sobre.html" style="margin-right: 2rem; text-decoration: none; font-size: 1.1rem;">Sobre</a>
-            <a href="entrar.html" style="margin-right: 2rem; text-decoration: none; font-size: 1.1rem;">Entrar</a>
-            <a href="evento.html" style="margin-right: 2rem; text-decoration: none; font-size: 1.1rem;">Evento</a>
-            <a href="contato.html" style="text-decoration: none; font-size: 1.1rem;">Contato</a>
-        </nav>
-    </header>
-    <img src="imagens/Logo.jpg" alt="Logo" style="max-width: 350px; display: block; margin-bottom: 1rem;">
+    <div id="site-header"></div>
     <div class="container">
         <h1>Curso de Letras</h1>
 
@@ -89,43 +80,7 @@
         </ul>
     </div>
 
-    <footer style="background-color: #f0f0f0; padding: 1rem; margin-top: 2rem; border-top: 2px solid #333; text-align: center;">
-        <br/>
-        <img id="moveTopBtn" src="imagens/MoveTop.png" alt="movetop" style="max-width: 50px; cursor: pointer; position: relative;" title="Mover ao topo">
-        <span id="moveTopText" style="display: none; position: absolute; background-color: #333; color: white; padding: 0.5rem; border-radius: 4px; font-size: 0.9rem; white-space: nowrap; margin-left: 60px; margin-top: -30px;">Mover ao topo</span>
-        <a id="facebookLink" href="https://www.facebook.com/ifsppirituba" target="_blank" style="position: relative; display: inline-block;">
-            <img src="imagens/facebook.png" alt="facebook" style="max-width: 50px; cursor: pointer;">
-            <span id="facebookText" style="display: none; position: absolute; background-color: #333; color: white; padding: 0.5rem; border-radius: 4px; font-size: 0.9rem; white-space: nowrap; margin-left: 60px; margin-top: -30px;">Facebook Pirituba</span>
-        </a><br>
-        IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
-    </footer>
-
-    <script>
-        const moveTopBtn = document.getElementById('moveTopBtn');
-        const moveTopText = document.getElementById('moveTopText');
-
-        moveTopBtn.addEventListener('mouseenter', function() {
-            moveTopText.style.display = 'inline-block';
-        });
-
-        moveTopBtn.addEventListener('mouseleave', function() {
-            moveTopText.style.display = 'none';
-        });
-
-        moveTopBtn.addEventListener('click', function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-
-        const facebookLink = document.getElementById('facebookLink');
-        const facebookText = document.getElementById('facebookText');
-
-        facebookLink.addEventListener('mouseenter', function() {
-            facebookText.style.display = 'inline-block';
-        });
-
-        facebookLink.addEventListener('mouseleave', function() {
-            facebookText.style.display = 'none';
-        });
-    </script>
+    <div id="site-footer"></div>
+    <script src="include-components.js"></script>
 </body>
 </html>
