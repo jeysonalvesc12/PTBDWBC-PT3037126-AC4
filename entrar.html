@@ -142,6 +142,21 @@
         facebookLink.addEventListener('mouseleave', function() {
             facebookText.style.display = 'none';
         });
+
+        // Form validation and submission
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const usuario = document.getElementById('usuario').value.trim();
+            const senha = document.getElementById('senha').value;
+            
+            if (!usuario || !senha) {
+                alert('Por favor, preencha usuário e senha.');
+                return;
+            }
+            
+            alert('Login realizado com sucesso!');
+            this.reset();
+        });
     </script>
 </body>
 </html></content>

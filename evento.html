@@ -198,6 +198,52 @@
         facebookLink.addEventListener('mouseleave', function() {
             facebookText.style.display = 'none';
         });
+
+        // Form validation and submission
+        document.getElementById('event-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const evento = document.getElementById('evento').value;
+            if (!evento) {
+                alert('Por favor, selecione um evento.');
+                return;
+            }
+            alert('Formulário de evento enviado com sucesso!');
+            this.reset();
+        });
+
+        document.getElementById('access-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const usuario = document.getElementById('usuario').value.trim();
+            const senha = document.getElementById('senha').value;
+            const confirmeSenha = document.getElementById('confirme-senha').value;
+            if (!usuario || !senha || !confirmeSenha) {
+                alert('Por favor, preencha todos os campos de acesso.');
+                return;
+            }
+            if (senha !== confirmeSenha) {
+                alert('As senhas não coincidem.');
+                return;
+            }
+            alert('Formulário de acesso enviado com sucesso!');
+            this.reset();
+        });
+
+        document.getElementById('personal-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const celular = document.getElementById('celular').value.trim();
+            const sexo = document.querySelector('input[name="sexo"]:checked');
+            const dataNascimento = document.getElementById('data-nascimento').value;
+            const perfilGit = document.getElementById('perfil-git').value.trim();
+            if (!nome || !email || !celular || !sexo || !dataNascimento || !perfilGit) {
+                alert('Por favor, preencha todos os campos pessoais obrigatórios.');
+                return;
+            }
+            alert('Formulário pessoal enviado com sucesso!');
+            this.reset();
+            document.getElementById('color-preview').style.backgroundColor = '#ffffff';
+        });
     </script>
 </body>
 </html></content>
