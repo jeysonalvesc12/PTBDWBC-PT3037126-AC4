@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #0066cc;
+            margin-top: 30px;
+        }
+        ul {
+            color: #555;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        header nav a {
+            margin-right: 2rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        header nav a:last-child {
+            margin-right: 0;
+        }
+        form {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .clear-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #f0f0f0; padding: 1rem; margin-bottom: 2rem; border-bottom: 2px solid #333;">
+        <nav>
+            <a href="index.html" style="margin-right: 2rem; text-decoration: none; font-size: 1.1rem;">Home</a>
+            <a href="sobre.html" style="margin-right: 2rem; text-decoration: none; font-size: 1.1rem;">Sobre</a>
+            <a href="contato.html" style="text-decoration: none; font-size: 1.1rem;">Contato</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Inscreva-se</h2>
+        
+        <form id="event-form">
+            <h3>Evento</h3>
+            <label for="evento">Selecione o Evento:</label>
+            <select id="evento" name="evento">
+                <option value="voe-sem-asas">Voe sem asas</option>
+                <option value="festa-junina">Festa Junina</option>
+                <option value="semana-eventos">Semana de Eventos</option>
+            </select>
+        </form>
+        
+        <form id="access-form">
+            <h3>Informações de Acesso</h3>
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            
+            <label for="confirme-senha">Confirme Senha:</label>
+            <input type="password" id="confirme-senha" name="confirme-senha" required>
+        </form>
+        
+        <form id="personal-form">
+            <h3>Informações Pessoais</h3>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" placeholder="(11) 99999-9999" required>
+            
+            <label>Sexo:</label>
+            <input type="radio" id="feminino" name="sexo" value="feminino">
+            <label for="feminino">Feminino</label>
+            <input type="radio" id="masculino" name="sexo" value="masculino">
+            <label for="masculino">Masculino</label><br><br>
+            
+            <label for="data-nascimento">Data de Nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" required>
+            
+            <label for="cor-favorita">Cor Favorita:</label>
+            <input type="color" id="cor-favorita" name="cor-favorita">
+            
+            <label for="perfil-git">Perfil do Git:</label>
+            <input type="url" id="perfil-git" name="perfil-git" placeholder="https://github.com/username">
+        </form>
+        
+        <button type="button" class="clear-btn" onclick="limparFormulario()">Limpar</button>
+        <button type="submit" class="submit-btn" onclick="enviarFormulario()">Enviar</button>
+    </div>
+    
+    <script>
+        function limparFormulario() {
+            document.getElementById('event-form').reset();
+            document.getElementById('access-form').reset();
+            document.getElementById('personal-form').reset();
+        }
+        
+        function enviarFormulario() {
+            // Aqui você pode adicionar lógica para enviar os dados
+            alert('Formulário enviado!');
+        }
+    </script>
+</body>
+</html></content>
+<parameter name="filePath">vscode-vfs://github/jeysonalvesc12/PTBDWBC-PT3037126-AC4/evento.html
