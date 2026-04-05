@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dwba4-semana-04-PT3037126</title>
+    <title>Entrar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,6 +42,41 @@
         header nav a:last-child {
             margin-right: 0;
         }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .forgot-password {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -54,48 +89,32 @@
             <a href="contato.html" style="text-decoration: none; font-size: 1.1rem;">Contato</a>
         </nav>
     </header>
-
     <img src="imagens/Logo.jpg" alt="Logo" style="max-width: 350px; display: block; margin-bottom: 1rem;">
+    <div class="container">
+        <h2>Entrar</h2>
+        
+        <form id="login-form">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            
+            <button type="submit">Entrar</button>
+            <a href="#" class="forgot-password">Esqueci a senha</a>
+        </form>
+    </div>
 
-    <section style="margin-bottom: 3rem;">
-        <h2>Nossos Cursos</h2>
-        <ul>
-            <li><a href="ADS.html">Análise e Desenvolvimento de Sistemas</a></li>
-            <li><a href="engenharia.html">Engenharia de Produção</a></li>
-            <li><a href="gestao.html">Gestão em Tecnologia da Informação</a></li>
-            <li><a href="letras.html">Letras</a></li>
-            <li><a href="publica.html">Gestão Pública</a></li>
-        </ul>
-    </section>
-
-    <h2><br/>Eventos<br/></h2>
-
-    <img src="imagens/SEJA_RARO.jpg" alt="SEJA_RARO" style="max-width: 400px; display: block; margin-bottom: 1rem;">
-    Aniversário do IFSP - Pirituba - Palestra Augusto Aielo
-
-    <h2><br/>Sobre a Biblioteca<br/></h2>
-
-    <img src="imagens/library.jpeg" alt="biblioteca" style="max-width: 200px; display: block; margin-bottom: 1rem;">
-
-
-    <h2><br>Conheça os novos títulos disponíveis na nossa biblioteca</h2>
-    <h5>Publicado: Quarta-feira, 14 de agosto de 2019</h5><br>
-    
-     <br><h2>Conheça o SUAP</h2></br>
-
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/yVbOcB1ryh0" title="YouTube video player" frameborder="0" 
-     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br/>
-
-     <br/>
-     <img id="moveTopBtn" src="imagens/MoveTop.png" alt="movetop" style="max-width: 50px; cursor: pointer; position: relative;" title="Mover ao topo">
-     <span id="moveTopText" style="display: none; position: absolute; background-color: #333; color: white; padding: 0.5rem; border-radius: 4px; font-size: 0.9rem; white-space: nowrap; margin-left: 60px; margin-top: -30px;">Mover ao topo</span>
-     <a id="facebookLink" href="https://www.facebook.com/ifsppirituba" target="_blank" style="position: relative; display: inline-block;">
-         <img src="imagens/facebook.png" alt="facebook" style="max-width: 50px; cursor: pointer;">
-         <span id="facebookText" style="display: none; position: absolute; background-color: #333; color: white; padding: 0.5rem; border-radius: 4px; font-size: 0.9rem; white-space: nowrap; margin-left: 60px; margin-top: -30px;">Facebook Pirituba</span>
-     </a><br>
-    
-     IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
+    <footer style="background-color: #f0f0f0; padding: 1rem; margin-top: 2rem; border-top: 2px solid #333; text-align: center;">
+        <br/>
+        <img id="moveTopBtn" src="imagens/MoveTop.png" alt="movetop" style="max-width: 50px; cursor: pointer; position: relative;" title="Mover ao topo">
+        <span id="moveTopText" style="display: none; position: absolute; background-color: #333; color: white; padding: 0.5rem; border-radius: 4px; font-size: 0.9rem; white-space: nowrap; margin-left: 60px; margin-top: -30px;">Mover ao topo</span>
+        <a id="facebookLink" href="https://www.facebook.com/ifsppirituba" target="_blank" style="position: relative; display: inline-block;">
+            <img src="imagens/facebook.png" alt="facebook" style="max-width: 50px; cursor: pointer;">
+            <span id="facebookText" style="display: none; position: absolute; background-color: #333; color: white; padding: 0.5rem; border-radius: 4px; font-size: 0.9rem; white-space: nowrap; margin-left: 60px; margin-top: -30px;">Facebook Pirituba</span>
+        </a><br>
+        IFSP - Câmpus Pirituba - Av. Mutinga, 951 - Jardim Santo Elias - CEP: 05110-000 - São Paulo/SP - Contato: (011) 2504-0100
+    </footer>
 
     <script>
         const moveTopBtn = document.getElementById('moveTopBtn');
@@ -125,4 +144,5 @@
         });
     </script>
 </body>
-</html>
+</html></content>
+<parameter name="filePath">vscode-vfs://github/jeysonalvesc12/PTBDWBC-PT3037126-AC4/entrar.html
